@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{% block title %} {% endblock %}
+	<meta charset="utf-8">
+	<meta name="vierport" content="width=device-widht, initial-scale=1">
+	
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	
+	<script type="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	
+	<script type="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+	{% load static %}
+	<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+	<div class="container-fluid">
+		
+		<div class="row">
+			<div class="col-sm-2">
+				{% block sidebars %}
+				 <ul class="sidebars-nav">
+				 	<li><a href="{% url 'index' %}">Home</a></li>
+				 	
+				{% endblock %}
+			</div>
+			</div>
+	</div>
+
+</body>
+</html>
